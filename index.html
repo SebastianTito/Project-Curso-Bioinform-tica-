@@ -17,75 +17,32 @@
             <h2>¿Qué es un Cariotipo?</h2>
             <p>Un cariotipo es el conjunto completo de cromosomas de un individuo, organizados por tamaño, forma y número. Es una herramienta fundamental en la genética para visualizar el genoma de una persona y detectar alteraciones cromosómicas.</p>
             <div class="image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Human_karyotype.svg/1200px-Human_karyotype.svg.png" alt="Cariotipo humano normal masculino (46,XY)">
-                <p class="caption">Ejemplo de un cariotipo humano normal masculino (46,XY). Los cromosomas se ordenan en 22 pares de autosomas y un par de cromosomas sexuales.</p>
+                <img src="images/normal.gif" alt="Cariotipo humano normal masculino (46,XY)">
+                <p class="caption">Ejemplo de un cariotipo humano normal masculino (46,XY).</p>
             </div>
         </section>
 
         <section id="grupos">
             <h2>Organización de los Cromosomas Humanos</h2>
-            <p>Para facilitar su estudio, los cromosomas se agrupan según su tamaño y la posición del centrómero (el punto de estrechamiento). Se clasifican en 7 grupos (A-G).</p>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3>Grupo A (Pares 1-3)</h3>
-                    <p>Los más grandes. Cromosomas 1 y 3 son metacéntricos; el 2 es submetacéntrico.</p>
-                </div>
-                <div class="card">
-                    <h3>Grupo B (Pares 4-5)</h3>
-                    <p>Grandes y submetacéntricos, difíciles de distinguir entre sí.</p>
-                </div>
-                <div class="card">
-                    <h3>Grupo C (Pares 6-12 y X)</h3>
-                    <p>De tamaño mediano y submetacéntricos. El cromosoma X también pertenece a este grupo.</p>
-                </div>
-                <div class="card">
-                    <h3>Grupo D (Pares 13-15)</h3>
-                    <p>Medianos y acrocéntricos, con satélites en sus brazos cortos.</p>
-                </div>
-                <div class="card">
-                    <h3>Grupo E (Pares 16-18)</h3>
-                    <p>Cortos. El 16 es metacéntrico, mientras que 17 y 18 son submetacéntricos.</p>
-                </div>
-                <div class="card">
-                    <h3>Grupo F (Pares 19-20)</h3>
-                    <p>Pequeños y metacéntricos.</p>
-                </div>
-                <div class="card">
-                    <h3>Grupo G (Pares 21-22 y Y)</h3>
-                    <p>Los más pequeños y acrocéntricos. El cromosoma Y también se incluye aquí.</p>
-                </div>
-            </div>
-        </section>
+            <p>Los cromosomas se agrupan en 7 grupos (A-G) según su tamaño y la posición del centrómero.</p>
+            </section>
 
         <section id="anomalias">
             <h2>Anomalías Cromosómicas Comunes</h2>
-            <p>Las anomalías pueden ser numéricas (un número incorrecto de cromosomas) o estructurales. Aquí vemos algunas de las más comunes.</p>
-            
+
             <div class="anomaly">
                 <h3>Trisomía 21 (Síndrome de Down)</h3>
-                <p>Causada por la presencia de una copia extra del cromosoma 21 (47,XX,+21 o 47,XY,+21).</p>
                 <div class="image-container">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Karyotype_of_Down_syndrome.png" alt="Cariotipo con Trisomía 21">
+                    <img src="images/down.png" alt="Cariotipo con Trisomía 21">
                     <p class="caption">Observa las tres copias del cromosoma 21.</p>
-                </div>
-            </div>
-            
-            <div class="anomaly">
-                <h3>Síndrome de Turner</h3>
-                <p>Afecta a mujeres y es causado por la ausencia total o parcial de un cromosoma X (45,X0).</p>
-                 <div class="image-container">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Turner_syndrome_karyotype.svg/1280px-Turner_syndrome_karyotype.svg.png" alt="Cariotipo del Síndrome de Turner">
-                    <p class="caption">Nota la ausencia de un segundo cromosoma sexual.</p>
                 </div>
             </div>
 
             <div class="anomaly">
-                <h3>Síndrome de Klinefelter</h3>
-                <p>Afecta a hombres y se debe a la presencia de un cromosoma X extra (47,XXY).</p>
+                <h3>Síndrome de Turner</h3>
                  <div class="image-container">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/XXY_karyotype.svg/1280px-XXY_karyotype.svg.png" alt="Cariotipo del Síndrome de Klinefelter">
-                    <p class="caption">Observa los dos cromosomas X y un cromosoma Y.</p>
+                    <img src="images/turner.jpg" alt="Cariotipo del Síndrome de Turner">
+                    <p class="caption">Nota la ausencia de un segundo cromosoma sexual.</p>
                 </div>
             </div>
         </section>
@@ -93,16 +50,13 @@
         <section id="practica">
             <h2>¡Hora de Practicar!</h2>
             <p>Observa el siguiente cariotipo y selecciona el diagnóstico correcto.</p>
-            
             <div class="practice-area">
-                <img id="practice-karyotype" src="https://i.ibb.co/6Pnvk1c/normal-male.png" alt="Cariotipo de práctica">
-                
+                <img id="practice-karyotype" src="images/normal.gif" alt="Cariotipo de práctica">
                 <div class="options">
                     <button onclick="checkAnswer('normal_male')">46, XY (Masculino Normal)</button>
                     <button onclick="checkAnswer('down_syndrome')">47, XY, +21 (Síndrome de Down)</button>
                     <button onclick="checkAnswer('turner_syndrome')">45, X0 (Síndrome de Turner)</button>
                 </div>
-                
                 <p id="feedback"></p>
                 <button id="next-btn" onclick="nextKaryotype()">Siguiente Cariotipo</button>
             </div>
@@ -110,7 +64,7 @@
     </main>
 
     <footer>
-        <p>Recurso educativo creado con fines didácticos. Imágenes de Wikimedia Commons y fuentes de genética médica.</p>
+        <p>Recurso educativo creado con fines didácticos.</p>
     </footer>
 
     <script src="script.js"></script>

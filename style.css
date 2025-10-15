@@ -1,143 +1,184 @@
+/* --- VARIABLES Y ESTILOS GLOBALES --- */
 :root {
-    --primary-color: #005A9C;
-    --secondary-color: #f4f4f4;
+    --primary-color: #0d47a1; /* Azul oscuro */
+    --secondary-color: #e3f2fd; /* Azul claro */
+    --accent-color: #1565c0; /* Azul medio */
     --text-color: #333;
-    --correct-color: #28a745;
-    --incorrect-color: #dc3545;
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --bg-color: #ffffff;
+    --border-color: #ddd;
+    --font-header: 'Roboto Slab', serif;
+    --font-body: 'Lato', sans-serif;
 }
 
 body {
-    font-family: var(--font-family);
-    line-height: 1.6;
-    margin: 0;
+    font-family: var(--font-body);
+    line-height: 1.7;
     color: var(--text-color);
-    background-color: #fff;
-}
-
-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-header h1 {
+    background-color: #f4f7f9;
     margin: 0;
-    font-size: 2.5rem;
 }
 
-main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-section {
-    background-color: var(--secondary-color);
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+h1, h2, h3 {
+    font-family: var(--font-header);
+    color: var(--primary-color);
 }
 
 h2 {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.5rem;
-    margin-top: 0;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 60px 0;
+}
+
+/* --- HEADER Y FOOTER --- */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+header h1 { color: white; margin: 0; }
+
+footer {
+    background-color: #333;
+    color: #aaa;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 60px;
+}
+
+/* --- SECCIONES PRINCIPALES --- */
+section {
+    background-color: var(--bg-color);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+article {
+    margin-bottom: 40px;
 }
 
 .image-container {
     text-align: center;
-    margin: 1.5rem 0;
+    margin: 20px 0;
 }
-
 .image-container img {
     max-width: 100%;
     height: auto;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+.caption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* --- GRIDS Y CARDS --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+.card {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-left: 5px solid var(--accent-color);
     border-radius: 4px;
 }
 
-.caption {
-    font-style: italic;
-    color: #666;
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-}
-
-.card-container {
+.anomaly-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
-
-.card {
-    background: white;
-    padding: 1rem;
-    border-radius: 5px;
-    border-left: 5px solid var(--primary-color);
-}
-
-.anomaly {
-    background: white;
-    padding: 1.5rem;
-    margin-top: 1rem;
-    border-radius: 5px;
-}
-
-.practice-area {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
     text-align: center;
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
+}
+.anomaly-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+.anomaly-grid h3 {
+    margin-bottom: 10px;
 }
 
+/* --- SECCIÓN INTERACTIVA --- */
+.practice-area {
+    background-color: #fafafa;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+}
 .practice-area img {
     max-width: 80%;
     border: 2px solid #ccc;
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
 }
-
 .options button {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 12px 24px;
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1em;
     transition: background-color 0.3s;
 }
-
 .options button:hover {
-    background-color: #004080;
+    background-color: var(--primary-color);
 }
-
 #feedback {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+    margin-top: 20px;
+    font-size: 1.2em;
     font-weight: bold;
 }
-
 #next-btn {
     background-color: #6c757d;
     color: white;
-    padding: 10px 25px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    margin-top: 1rem;
+    margin-top: 15px;
     cursor: pointer;
     display: none; /* Oculto por defecto */
 }
 
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 2rem;
-    background-color: #333;
-    color: white;
-    font-size: 0.9rem;
+/* --- SECCIÓN DE REFERENCIAS --- */
+#referencias details {
+    cursor: pointer;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+#referencias summary {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+#referencias ul {
+    margin-top: 15px;
+    padding-left: 20px;
 }
